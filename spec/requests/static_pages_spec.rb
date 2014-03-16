@@ -9,9 +9,14 @@ describe "StaticPages" do
       expect(page).to have_content('Weibo')
     end
 
-    it "should have the title 'Home'" do
+    it "should have the base title 'Weibo App'" do
       visit '/static_pages/home'
-      expect(page).to have_title("#{base_title} | Home")
+      expect(page).to have_title("#{base_title}")
+    end
+
+    it "should have the custom title 'Home'" do
+      visit '/static_pages/home'
+      expect(page).not_to have_title('| Home')
     end
   end
 
