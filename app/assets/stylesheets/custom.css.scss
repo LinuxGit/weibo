@@ -1,0 +1,93 @@
+@import "bootstrap";
+/* mixins, variables, etc. */
+$grayMediumLight: #eaeaea;
+
+/* universal */
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+
+.btn {
+  &:visited {
+    color: white;
+  }
+}
+
+/* typography */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 1.2em;
+  color: $grayLight;
+  margin-bottom: 30px;
+}
+
+p {
+  font-size: 1.1em;
+}
+
+/* header */
+#logo {
+  float: left;
+  color: white;
+  font-size: 1.7em;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-top: 9px;
+  margin-right: 10px;
+  line-height: 1;
+  letter-spacing: -1px;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+/* footer */
+footer {
+  margin-top: 45px;
+  border-top: 1px solid $grayMediumLight;
+  padding-top: 5px;
+  color: $grayLight;
+  a {
+    color: $gray;
+    &:hover {
+      color: $grayDarker;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+  }
+}
