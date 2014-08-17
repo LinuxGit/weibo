@@ -45,6 +45,13 @@ describe "Authentication" do
     describe "for non-signed-in users" do
       let(:user) { FactoryGirl.create(:user) }
 
+      describe "profile and settings should not appear" do
+        before { visit root_url }
+
+        it { should_not have_link('Profile') }
+        it { should_not have_link('Settings') }
+      end
+
       describe "in the Users controller" do
         describe "visit edit path" do
           before { visit edit_user_path(user) }
