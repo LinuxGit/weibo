@@ -6,7 +6,7 @@
     <%= gravatar_for(@user, options = { size: 80 }) %>
     <a href="http://gravatar.com/emails" target=_blank>change</a>
     <%= form_for(@user) do |f| %>
-      <%= render 'fields', f:f %>
+      <%= render 'fields', f: f %>
       <%= f.submit "Save changes", class: "btn btn-large btn-success" %>
     <% end %>
   </div>
