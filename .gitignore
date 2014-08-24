@@ -19,4 +19,4 @@
 *~
 .DS_Store
 .secret
-/config/database.yml
+config/database.yml
