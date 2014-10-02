@@ -1,0 +1,17 @@
+<div id="image-header" class="home">
+  <h2>The new way to design your home</h2>
+  <div class="row">
+    <div class="span8 offset5">
+      <%= form_tag "#", :method => 'get' do %>
+        <p>
+        <div id="search" class="span4">
+          <%= text_field_tag :search, params[:search] %>
+        </div>
+        <div class="span2">
+          <%= submit_tag "Search", class: "btn btn-large btn-success" %>
+        </div>
+        </p>
+      <% end %>
+    </div>
+  </div>
+</div>
